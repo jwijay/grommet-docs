@@ -47,7 +47,7 @@ var AnchorDoc = React.createClass({
     );
 
     var iconAnchor = (
-      <Anchor href="" onClick={this._onClick}><AddIcon /></Anchor>
+      <Anchor href="" onClick={this._onClick} icon="Add"></Anchor>
     );
 
     var targetAnchor = (
@@ -66,10 +66,10 @@ var AnchorDoc = React.createClass({
           <Anchor href="" onClick={this._onClick}>Text</Anchor>
         </Box>
         <Box pad="small">
-          <Anchor href="" primary={true} onClick={this._onClick}>Text</Anchor>
+          <Anchor href="" primary={true} icon="View" onClick={this._onClick}>Text</Anchor>
         </Box>
         <Box pad="small">
-          <Anchor href="" onClick={this._onClick}><AddIcon /></Anchor>
+          <Anchor href="" onClick={this._onClick} icon="Add"></Anchor>
         </Box>
       </Section>
     );
@@ -90,7 +90,7 @@ var AnchorDoc = React.createClass({
         <section>
           <h2>Options</h2>
           <dl>
-            <dt><code>disabled  true|false</code></dt>
+            <dt><code>disabled       true|false</code></dt>
             <dd>
               Whether to disable the anchor. Default is false.
             </dd>
@@ -104,7 +104,9 @@ var AnchorDoc = React.createClass({
             <dt><code>onClick        {"{func}"}</code></dt>
             <dd>Click handler.</dd>
             <dt><code>primary        true|false</code></dt>
-            <dd>Whether this is a primary anchor.</dd>
+            <dd>Whether this is a primary anchor. The primary anchor icon can also be set using the icon option.</dd>
+            <dt><code>icon           {"{text}"}</code></dt>
+            <dd>The icon name (PascalCased) for an icon anchor or primary anchor.</dd>
             <dt><code>tag            {"{text}"}</code></dt>
             <dd>The DOM tag to use for the element. The default is {'<a>'}.
               This should be used in conjunction with components like
