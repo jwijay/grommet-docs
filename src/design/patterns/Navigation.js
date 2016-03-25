@@ -18,15 +18,15 @@ var Navigation = React.createClass({
   },
 
   render: function () {
-    console.log('this.context', this.context);
     let developHref = '/docs/develop/';
+    
     return (
       <DocsArticle title="Primary Navigation" colorIndex="neutral-3">
-        <Section pad={{vertical: 'medium', between: 'medium'}}>
+        <Section pad={{between: 'large'}}>
           <Paragraph size="large">
             Grommet follows a mobile-first design approach for its main navigation. To respond down to smaller device sizes our header consists of only the essential elements of an application. We’ve instituded a Hub & Spoke design aesthetic to keep the elements minimal and promote a contextual navigation experience.
           </Paragraph>
-          <Box pad={{vertical: 'none', horizontal: 'medium'}} colorIndex="light-2">
+          <Box className="call-out" pad={{horizontal: 'medium'}} colorIndex="light-2">
             <blockquote>
               <strong>Hub & Spoke</strong> Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
             </blockquote>
@@ -36,13 +36,13 @@ var Navigation = React.createClass({
           <Paragraph size="large">
             <strong>The Header</strong> is designed to be easily accessible while supporting the main content of your application.
           </Paragraph>
-          <Box direction="row" pad={{between: 'large'}} wrap={true}>
+          <Box direction="row" pad={{between: 'large'}}>
             <Box pad={{vertical: 'small'}}>
-              <Image src="img/navigation_header.png" alt="navigation header" size="small" />
+              <Image src="img/TheHeader.svg" alt="navigation header" size="small" />
             </Box>
             <Box className="flex">
               <Paragraph margin="small">
-                When designing your application the header should only provide the essential elements of navigation. The header composition is formed by a combination of the <em>Application Icon</em>, <em>Application Name</em>, and when available, the <em>User Functional Icon</em>, and/or <em>Search Field/Icon</em>.
+                When designing your application the header should only provide the essential elements of navigation. The header composition is formed by a combination of the <em>Application Icon</em>, <em>Application Name</em>, and when available, the <em>User Functional Icon</em>, and/or <em>Search Field</em>/<em>Icon</em>.
               </Paragraph>
               <Paragraph margin="small">
                 If your application requires the exposure of other navigational elements or unique application functions, those should be reserved for the main navigation’s sidebar.
@@ -58,9 +58,9 @@ var Navigation = React.createClass({
           <Paragraph size="large">
             <strong>The Sidebar</strong> When designing your application's main navigation, your sidebar is your friend. All key application areas should be accessible through your sidebar.
           </Paragraph>
-          <Box direction="row" pad={{between: 'large'}} wrap={true}>
+          <Box direction="row" pad={{between: 'large'}}>
             <Box pad={{vertical: 'small'}}>
-              <Image src="img/navigation_sidebar.png" alt="navigation sidebar" size="small" />
+              <Image src="img/TheSidebar.svg" alt="navigation sidebar" size="small" />
             </Box>
             <Box>
               <Paragraph margin="small">
@@ -80,9 +80,9 @@ var Navigation = React.createClass({
           <Paragraph size="large">
             <strong>Action Dropdown Menu</strong> In some cases the application menu items will necessitate a need for secondary actions. When these cases are presented, the dropdown component can be used in conjunction with a functional icon.
           </Paragraph>
-          <Box direction="row" pad={{between: 'large'}} wrap={true}>
+          <Box direction="row" pad={{between: 'large'}}>
             <Box pad={{vertical: 'small'}}>
-              <Image src="img/navigation_dropdown.png" alt="navigation action dropdown menu" size="small" />
+              <Image src="img/ActionDropdownMenu.svg" alt="navigation action dropdown menu" size="small" />
             </Box>
             <Box>
               <Paragraph margin="small">
@@ -102,9 +102,9 @@ var Navigation = React.createClass({
           <Paragraph size="large">
             <strong>Responsive Behavior</strong> Much like all components in Grommet, the navigation automagically responds to display as much context as possible for users at different browser sizes and devices.
           </Paragraph>
-          <Box direction="row" pad={{between: 'large'}} wrap={true}>
+          <Box direction="row" pad={{between: 'large'}}>
             <Box pad={{vertical: 'small'}}>
-              <Image src="img/navigation_responsive.png" alt="navigation responsive behavior" size="small" />
+              <Image src="img/ResponsiveBehavior.svg" alt="navigation responsive behavior" size="small" />
             </Box>
             <Box>
               <Paragraph margin="small">
@@ -121,13 +121,13 @@ var Navigation = React.createClass({
         </Section>
 
         <Box pad={{vertical: 'medium'}}>
-          <Box pad="medium" colorIndex="light-2">
+          <Box className="call-out" pad="medium" colorIndex="light-2">
             <Heading tag="h2" strong={true}>Showcase</Heading>
             <Heading tag="h6">Header Demo</Heading>
             <Anchor href="http://ferret.grommet.io/">
-              <h3>
+              <Heading tag="h3" margin="none">
                 <strong>Ferret Enterprise Application</strong>
-              </h3>
+              </Heading>
             </Anchor>
           </Box>
         </Box>

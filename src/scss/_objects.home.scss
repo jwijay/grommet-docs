@@ -35,4 +35,8 @@
   svg g.doc-brand {
     stroke: $brand-color;
   }
+
+  .call-out {
+    border-radius: $inuit-base-spacing-unit / 3;
+  }
 }
