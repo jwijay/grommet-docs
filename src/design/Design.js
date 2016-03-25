@@ -16,6 +16,7 @@ var Basics = require('./Basics');
 var Patterns = require('./Patterns');
 var Showcase = require('./Showcase');
 var Login = require('./patterns/Login');
+var Navigation = require('./patterns/Navigation');
 var TBD = require('grommet/components/TBD');
 var Resources = require('./Resources');
 
@@ -41,6 +42,7 @@ var CONTENTS = [
     ]},
   {route: "design_patterns", label: 'Patterns', component: Patterns,
     contents: [
+      {route: "design_navigation", label: 'Navigation', component: Navigation},
       {route: "design_login", label: 'Login', component: Login},
       {route: "design_header", label: 'Header', component: TBD},
       {route: "design_dashboard", label: 'Dashboard', component: TBD},

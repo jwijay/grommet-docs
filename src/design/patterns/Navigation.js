@@ -1,93 +1,139 @@
 // (C) Copyright 2014-2015 Hewlett Packard Enterprise Development LP
 
 var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
+
+var Anchor = require('grommet/components/Anchor');
+var Box = require('grommet/components/Box');
+var Heading = require('grommet/components/Heading');
+var Image = require('grommet/components/Image');
+var Paragraph = require('grommet/components/Paragraph');
+var Section = require('grommet/components/Section');
 var DocsArticle = require('../../DocsArticle');
 
-var Login = React.createClass({
+var Navigation = React.createClass({
+  contextTypes: {
+    routePrefix: React.PropTypes.string.isRequired
+  },
+
   render: function () {
+    console.log('this.context', this.context);
+    let developHref = '/docs/develop/';
     return (
-      <DocsArticle title="Login" colorIndex="neutral-3">
-        <p>
-          Typically the first thing a user does on a login screen is enter
-          their username. So it makes sense to place focus on the username
-          field so that it is ready and active. There should be no cognitive
-          effort required to use our login screen. Upon entering the page,
-          focus is placed in the username field. The user can then mouse,
-          tab on the keyboard, or tap to the password field.
+      <DocsArticle title="Primary Navigation" colorIndex="neutral-3">
+        <Section pad={{vertical: 'medium', between: 'medium'}}>
+          <Paragraph size="large">
+            Grommet follows a mobile-first design approach for its main navigation. To respond down to smaller device sizes our header consists of only the essential elements of an application. We’ve instituded a Hub & Spoke design aesthetic to keep the elements minimal and promote a contextual navigation experience.
+          </Paragraph>
+          <Box pad={{vertical: 'none', horizontal: 'medium'}} colorIndex="light-2">
+            <blockquote>
+              <strong>Hub & Spoke</strong> Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            </blockquote>
+          </Box>
+        </Section>
+        <Section separator="bottom">
+          <Paragraph size="large">
+            <strong>The Header</strong> is designed to be easily accessible while supporting the main content of your application.
+          </Paragraph>
+          <Box direction="row" pad={{between: 'large'}} wrap={true}>
+            <Box pad={{vertical: 'small'}}>
+              <Image src="img/navigation_header.png" alt="navigation header" size="small" />
+            </Box>
+            <Box className="flex">
+              <Paragraph margin="small">
+                When designing your application the header should only provide the essential elements of navigation. The header composition is formed by a combination of the <em>Application Icon</em>, <em>Application Name</em>, and when available, the <em>User Functional Icon</em>, and/or <em>Search Field/Icon</em>.
+              </Paragraph>
+              <Paragraph margin="small">
+                If your application requires the exposure of other navigational elements or unique application functions, those should be reserved for the main navigation’s sidebar.
+              </Paragraph>
+              <Link to={developHref + 'header'}>
+                <Anchor tag="span" primary={true} label="Header Component" />
+              </Link>
+            </Box>
+          </Box>
+        </Section>
 
-          <img src="img/Login-form.svg" alt="login form" />
-        </p>
+        <Section separator="bottom">
+          <Paragraph size="large">
+            <strong>The Sidebar</strong> When designing your application's main navigation, your sidebar is your friend. All key application areas should be accessible through your sidebar.
+          </Paragraph>
+          <Box direction="row" pad={{between: 'large'}} wrap={true}>
+            <Box pad={{vertical: 'small'}}>
+              <Image src="img/navigation_sidebar.png" alt="navigation sidebar" size="small" />
+            </Box>
+            <Box>
+              <Paragraph margin="small">
+              As opposed to using the <em>Application Icon</em> as a link to the application main page, Grommet uses the icon as a mechanism to toggle the sidebar for access to all areas of the application.
+              </Paragraph>
+              <Paragraph margin="small">
+                The sidebar should be accessible at all times. For more simple applications, the sidebar might not even be needed.
+              </Paragraph>
+              <Link to={developHref + 'sidebar'}>
+                <Anchor tag="span" primary={true} label="Sidebar Component" />
+              </Link>
+            </Box>
+          </Box>
+        </Section>
 
-        <section>
-          <h2>Mobile</h2>
+        <Section separator="bottom">
+          <Paragraph size="large">
+            <strong>Action Dropdown Menu</strong> In some cases the application menu items will necessitate a need for secondary actions. When these cases are presented, the dropdown component can be used in conjunction with a functional icon.
+          </Paragraph>
+          <Box direction="row" pad={{between: 'large'}} wrap={true}>
+            <Box pad={{vertical: 'small'}}>
+              <Image src="img/navigation_dropdown.png" alt="navigation action dropdown menu" size="small" />
+            </Box>
+            <Box>
+              <Paragraph margin="small">
+                It’s important to maintain a short list of actions that are relevant to the function of the icon. The dropdown menu component only supports a <strong>single level of structure</strong>. If you are trying to expose more granular actions within a menu or sub-Sections, these actions should be moved outside of the dropdown menu or into a separate display mechasim in your application.
+              </Paragraph>
+              <Paragraph margin="small">
+                In responsive views, it’s important to note that the dropdown menu does not occupy the entire screen.
+              </Paragraph>
+              <Link to={developHref + 'menu'}>
+                <Anchor tag="span" primary={true} label="Menu Component" />
+              </Link>
+            </Box>
+          </Box>
+        </Section>
 
-          <p>The mobile login page has the same look and feel, but is sized accordingly. The dialog portion of the screen occupies the full width of the screen. The footer information becomes stacked as necessary. There is no scrolling on the login page.</p>
+        <Section separator="bottom">
+          <Paragraph size="large">
+            <strong>Responsive Behavior</strong> Much like all components in Grommet, the navigation automagically responds to display as much context as possible for users at different browser sizes and devices.
+          </Paragraph>
+          <Box direction="row" pad={{between: 'large'}} wrap={true}>
+            <Box pad={{vertical: 'small'}}>
+              <Image src="img/navigation_responsive.png" alt="navigation responsive behavior" size="small" />
+            </Box>
+            <Box>
+              <Paragraph margin="small">
+                A great example of this behavior is how Grommet will display the sidebar when there is enough space horizontally in the view, but will collapse it for mobile experiences.
+              </Paragraph>
+              <Paragraph margin="small">
+                These types of behaviors are built into each component so designers and developers alike can focus on their content and the experience, rather than the styling and structure of the componentry.
+              </Paragraph>
+              <Link to={this.context.routePrefix + 'resources'}>
+                <Anchor tag="span" primary={true} label="Design Resources" />
+              </Link>
+            </Box>
+          </Box>
+        </Section>
 
-          <p>As shown in the examples, the login page on mobile should respond to the screen size and orientation appropriately. It is important to put the focus in the username field and the keyboard should be open. In addition, select the appropriate type of keyboard based on the format of your username field. If the format is an email address, open the email keyboard.</p>
-
-          <img src="img/Login-mobile.svg" alt="login mobile" />
-        </section>
-
-        <section>
-          <h2>Expected elements</h2>
-
-          <p>The company logo should be present on the login pages. Alternatively, if a product has an approved product logo, then it can be used instead of the company logo.</p>
-
-          <p>The product name or application name is also prominent on the login page, immediately below the logo. Next are the username and password fields. Finally, the Login button should big and visible. It should be the default button for the form so the user can press Enter on the keyboard to login.</p>
-
-          <img src="img/Login-elements.svg" alt="login elements" />
-        </section>
-
-        <section>
-          <h2>Optional elements</h2>
-
-          <p>The following fields are optional and can be used based on the needs of the application.</p>
-
-          <h3>Forgot username</h3>
-          <p>Allows a user to request assistance locating their username.</p>
-
-          <h3>Forgot password</h3>
-          <p>Allows the user to request assistance resetting their password.</p>
-
-          <h3>Remember me</h3>
-          <p>Allows a user to indicate they want the application to remember their login information to the extent allowed by the security requirements of the application.</p>
-
-          <h3>Sign up</h3>
-          <p>For applications which allow users to sign up for access, this link should take them to a page that either creates an account or submits a request for an account to be created.</p>
-
-          <h3>Footer</h3>
-          <p>Contains the copyright, product version, terms of use, and privacy references.</p>
-
-          <h3>Background image</h3>
-          <p>Most applications should include a background image for visual appeal. However, if there are constraints, it is acceptable to use a solid light gray background.</p>
-        </section>
-
-        <section>
-          <h2>Handling the Unexpected</h2>
-
-          <p>Should the user tap on the Login button before entering their username or password, red error messages should be displayed indicating one or both of the fields requires input.</p>
-
-          <p>In the case that the authentication sequence fails, for security reasons the error message cannot indicate which field was incorrectly entered. The message must simply state that the username or password were not recognized.</p>
-        </section>
-
-        <section>
-          <h2>Variations</h2>
-
-          <p>Given the diverse nature of applications, there are a few variations available for the login page. Below, the example shows the login page without a background image. The background image is gratuitous and is not required. Applications that have limited space resources (such as embedded devices) may adopt such a style to keep the resource demands to a minimum.</p>
-
-          <img src="img/Login-no-background.svg" alt="login no background" />
-
-          <img src="img/Login-background.svg" alt="login background" />
-        </section>
-
-        <section>
-          <h2>Accessibility</h2>
-
-          <p>The user must be able to navigate the login page without the use of a pointing device on a desktop. If there is an error on input, there shall be red text that provides error feedback.</p>
-        </section>
+        <Box pad={{vertical: 'medium'}}>
+          <Box pad="medium" colorIndex="light-2">
+            <Heading tag="h2" strong={true}>Showcase</Heading>
+            <Heading tag="h6">Header Demo</Heading>
+            <Anchor href="http://ferret.grommet.io/">
+              <h3>
+                <strong>Ferret Enterprise Application</strong>
+              </h3>
+            </Anchor>
+          </Box>
+        </Box>
       </DocsArticle>
     );
   }
 });
 
-module.exports = Login;
+module.exports = Navigation;
