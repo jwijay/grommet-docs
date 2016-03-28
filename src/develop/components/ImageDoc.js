@@ -26,7 +26,7 @@ const ImageDoc = () => {
           <dt><code>full       true|horizontal|vertical|false</code></dt>
           <dd>Whether the width and/or height should take the full viewport size.</dd>
           <dt><code>size       small|medium|large|thumb</code></dt>
-          <dd>The size of the Paragraph text. Defaults to <code>medium</code>.</dd>
+          <dd>The size of the Image. Defaults to <code>medium</code>.</dd>
           <dt><code>src        {"{string}"}</code></dt>
           <dd>The actual image file source.</dd>
         </dl>

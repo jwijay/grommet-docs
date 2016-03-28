@@ -52,7 +52,7 @@ var RestDoc = React.createClass({
             <dd>Get the resource indicated by the uri and optional query parameters.
             The second argument will be converted into a query string.</dd>
             <dt><code>head (uri, object)</code></dt>
-            <dd>Chek the resource indicated by the uri and optional query parameters.
+            <dd>Check the resource indicated by the uri and optional query parameters.
             The second argument will be converted into a query string.</dd>
             <dt><code>patch (uri, data)</code></dt>
             <dd>Update some of the resource indicated by the uri with the provided data.</dd>

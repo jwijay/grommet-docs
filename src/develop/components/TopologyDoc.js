@@ -37,7 +37,7 @@ var TopologyDoc = React.createClass({
         <section>
           <h2>Available Sub Components</h2>
 
-          <h3>Toplogy.Part</h3>
+          <h3>Topology.Part</h3>
           <p>An individual part. I Part can contain Parts or another Part.</p>
           <h4>Options</h4>
           <dl>
@@ -59,7 +59,7 @@ var TopologyDoc = React.createClass({
             <dd>If provided, adds the corresponding status icon.</dd>
           </dl>
 
-          <h3>Toplogy.Parts</h3>
+          <h3>Topology.Parts</h3>
           <p>A container for Part components. It is provided purely to assist with Part layout.</p>
           <h4>Options</h4>
           <dl>
@@ -69,7 +69,7 @@ var TopologyDoc = React.createClass({
             <dd>Whether or not to all children should be the same size.</dd>
           </dl>
 
-          <h3>Toplogy.Label</h3>
+          <h3>Topology.Label</h3>
           <p>A label. It provides finer control over how Part labels are rendered.</p>
         </section>
 
