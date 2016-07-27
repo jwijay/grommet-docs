@@ -83,7 +83,7 @@ class TileDoc extends Component {
             <strong>{"Tile " + index}</strong>
           </Header>
           <Box pad="small">
-            <p>Tile summary content. One or two lines.</p>
+            <p>{(options.alternateContent && index % 2 === 0) ? `Tile summary content. One or two lines. Tile summary content. One or two lines. Tile summary content. One or two lines.` : `Tile summary content. One or two lines.`}</p>
           </Box>
           {bottom}
         </Tile>
@@ -138,6 +138,13 @@ class TileDoc extends Component {
             <dd>The currently selected item(s) using a zero based index.</dd>
             <dt><code>size        small|medium|large</code></dt>
             <dd>The width of the contained tiles. Defaults to <code>medium</code>.</dd>
+            <dt><code>masonry     true|false</code></dt>
+            <dd>Whether or not to update number of columns based on component width.
+              Defaults to <code>false</code>. Can set number of columns using
+              `numColumns`.</dd>
+            <dt><code>numColumns  number</code></dt>
+            <dd>Number of columns to allow for masonry option, based on component width.
+              Responds based on minimum column width.</dd>
           </dl>
           <p>Options for <Link to={this.context.routePrefix + "box"}>Box</Link> are
           also available for Tiles.</p>
@@ -236,6 +243,13 @@ class TileDoc extends Component {
               selectable="multiple"
               onSelect={this._onMultipleSelect}>
               {this._renderRichTiles()}
+            </Tiles>
+          </div>
+
+          <h3>Large, Masonry, 4-Columns</h3>
+          <div className="example">
+            <Tiles masonry={true} numColumns={4}>
+              {this._renderRichTiles({alternateContent: true})}
             </Tiles>
           </div>
 
