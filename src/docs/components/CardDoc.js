@@ -30,6 +30,7 @@ export default class CardDoc extends Component {
     const simpleCard = (
       <Box colorIndex="light-2">
         <Card
+          contentPad="medium"
           thumbnail="/img/carousel-1.png"
           label="Featured Post"
           heading="The Key Steps to Reducing Software Spend"
@@ -43,6 +44,7 @@ export default class CardDoc extends Component {
     const linkCard = (
       <Box colorIndex="light-2">
         <Card
+          contentPad="medium"
           onClick={this._onClickCard.bind(this, grommetPath)}
           reverse={true}
           thumbnail="/img/carousel-1.png"
@@ -64,6 +66,7 @@ export default class CardDoc extends Component {
     const videoCard = (
       <Box colorIndex="light-2">
         <Card
+          contentPad="medium"
           direction="row"
           thumbnail="/img/carousel-1.png"
           label="Video - 4:27"
@@ -105,6 +108,7 @@ export default class CardDoc extends Component {
 
     const socialFeedCard1 = (
       <Card
+        contentPad="medium"
         onClick={this._onClickCard.bind(this, 'http://www.twitter.com')}
         direction="column"
         label="Social"
@@ -118,6 +122,7 @@ export default class CardDoc extends Component {
 
     const socialFeedCard2 = (
       <Card
+        contentPad="medium"
         onClick={this._onClickCard.bind(this, 'http://www.facebook.com')}
         direction="column"
         label="Social"
@@ -131,6 +136,7 @@ export default class CardDoc extends Component {
 
     const socialFeedCard3 = (
       <Card
+        contentPad="medium"
         onClick={this._onClickCard.bind(this, 'http://www.linkedin.com')}
         direction="column"
         label="Social"
@@ -144,6 +150,7 @@ export default class CardDoc extends Component {
 
     const blogPostCard = (
       <Card
+        contentPad="medium"
         onClick={this._onClickCard.bind(this, grommetPath)}
         direction="column"
         label="Featured Post"
@@ -163,6 +170,7 @@ export default class CardDoc extends Component {
 
     const featuredPostCard = (
       <Card
+        contentPad="medium"
         onClick={this._onClickCard.bind(this, grommetPath)}
         thumbnail="/img/carousel-1.png"
         direction="column"
@@ -193,6 +201,7 @@ export default class CardDoc extends Component {
     const cardTiles = (
       <Tiles colorIndex="light-2">
         <Card
+          contentPad="medium"
           onClick={this._onClickCard.bind(this, grommetPath)}
           direction="column"
           thumbnail="/img/carousel-1.png"
@@ -212,6 +221,7 @@ export default class CardDoc extends Component {
           link={<Anchor href="#" label="Watch Now" icon={<WatchIcon />} />}
         />
         <Card
+          contentPad="medium"
           direction="column"
           thumbnail="/img/carousel-1.png"
           label="Video - 4:27"
@@ -226,6 +236,7 @@ export default class CardDoc extends Component {
           link={<Anchor href="#" label="Watch Now" icon={<WatchIcon />} />}
         />
         <Card
+          contentPad="medium"
           direction="column"
           thumbnail="/img/carousel-1.png"
           label="Featured Post"
@@ -235,6 +246,7 @@ export default class CardDoc extends Component {
             complex negotiations and renewal processes`}
         />
         <Card
+          contentPad="medium"
           direction="column"
           thumbnail="/img/carousel-1.png"
           label="Featured Post"
